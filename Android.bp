@@ -40,14 +40,15 @@ rust_library {
     srcs: ["src/lib.rs"],
     edition: "2015",
     features: [
+        "mutex",
         "once",
+        "rwlock",
+        "spin_mutex",
         "std",
     ],
     apex_available: [
         "//apex_available:platform",
-        "com.android.compos",
-        "com.android.resolv",
-        "com.android.virt",
+        "//apex_available:anyapex",
     ],
     product_available: true,
     vendor_available: true,
